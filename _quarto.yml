@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: docs
+  preview: 
+    port: 1200
+    browser: true
+
+website:
+  title: "Ocean Acidification"
+  back-to-top-navigation: true
+  search: true
+  navbar: 
+    background: white
+    search: true
+    left:
+      - text: "About"
+        href: index.qmd
+  page-footer: |
+    ![](/assets/logos/uhm_logo.png){width=40%}
+    <br><br>
+        
+format:
+  html:
+    theme: litera
+    page-layout: full
+    link-external-newwindow: true
+    code-fold: true
+    code-overflow: wrap
+    code-annotations: hover
+    smooth-scroll: true
+    toc: true
+    toc-depth: 4
+    toc-location: left
+
+execute:
+  message: false
+  warning: false
+  echo: true

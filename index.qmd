@@ -1,0 +1,33 @@
+---
+title: "Project Title"
+# subtitle: ""
+author: "Lansing Perg"
+description: "Brief summary of the project."
+format: html
+---
+
+<!-- Hero section -->
+<!-- <div class="text-center my-5"> -->
+<!-- ![](assets/logos/uhm_logo.png){fig-alt="Placeholder hero image" width="50%"} -->
+<!-- </div> -->
+
+## Welcome to *Project Title*
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.  
+Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+
+## What is *Project Title*?
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+- **Lorem ipsum**: dolor sit amet  
+- **Consectetur**: adipiscing elit  
+- **Integer**: nec odio
+
+## Key Features
+
+1. **Feature One**  
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+2. **Feature Two**  
+   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+3. **Feature Three**  
+   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
