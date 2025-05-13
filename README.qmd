@@ -1,5 +1,4 @@
 ---
 title: "Ocean Acidification"
 format: gfm
-editor: visual
 ---
