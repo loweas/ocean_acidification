@@ -183,6 +183,22 @@ format:
     margin-right:auto;
   }
 
+  .resize-img-60 {
+    width:80%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .sidebar-right .sticky-col {
+    grid-column: 1;
+  }
+
+  .sidebar-right {
+    grid-template-columns: 1fr var(--cr-narrative-sidebar-width);
+    margin-right: 60px;
+  }
+
   @media (min-width: 370px) and (max-width: 570px) {
     .cr-section.sidebar-left .narrative-col,
     .cr-section.sidebar-right .narrative-col,
@@ -492,12 +508,15 @@ Global Climate Models (GCMs) lack the fine spatial resolution needed for robust 
 :::{#cr-roms-cobalt}
 ![](/assets/images/lucia/cesm2_roms_cobalt_models.gif)
 :::
+:::
 
-Three climate scenarios representing different emission pathways were analyzed: [@cr-ssps]
+Three climate scenarios representing different emission pathways were analyzed:
 
 - SSP1-2.6: Aggressive emission reductions (CO₂ declining to 445 ppm by 2100)
 - SSP2-4.5: Moderate emission reductions (CO₂ reaching 603 ppm by 2100)
 - SSP3-7.0: Current emission trends continue (CO₂ reaching 871 ppm by 2100)
+
+:::{.cr-section layout="sidebar-left"}
 
 These Shared Socioeconomic Pathways (SSPs) represent plausible futures based on different assumptions about global climate policy, economic development, and population growth. We also introduce a climate novelty metric to quantify how far and how quickly future OA conditions are projected to exceed the range of historical variability, providing a framework for contextualizing ecological risk. [@cr-ssps]
 
@@ -533,11 +552,97 @@ The spatial distribution of novelty was also analyzed, revealing that both the t
 
 ## Coral reef fishery outcomes in the MHI under climate change
 
-<!-- Text [@cr-]
+:::{.cr-section layout="sidebar-right"}
 
-:::{#cr-}
-![](/assets/images/lucia/)
-::: -->
+The Atlantis ecosystem model for the MHI was configured with 79 dynamically modeled boxes arranged across depth gradients, supplemented by 6 boundary boxes that facilitated nutrient and plankton replenishment through vertical mixing with deep-ocean layers. This spatial framework captured habitat diversity across 4 vertical layers extending from surface waters to deep sediment. [@cr-atlantis-boxes-map]
+
+:::{#cr-atlantis-boxes-map}
+![](/assets/images/lansing/atlantis_boxes_map.png){.resize-img-60}
+:::
+
+High-resolution projections of future ocean conditions, developed using ROMS/COBALT for three climate scenarios, were used to drive the Atlantis ecosystem model. Atlantis incorporated local nearshore environmental parameters for each scenario, including hydrodynamics, temperature, pH, salinity, and phytoplankton densities, to represent the changing conditions most relevant to shallow coral reefs in the MHI. [@cr-project-workflow]
+
+:::{#cr-project-workflow}
+![](/assets/images/lansing/project_workflow.png){.resize-img-60}
+:::
+
+The model incorporated region-specific biological responses derived from meta-analyses of tropical Pacific species. The ecosystem was structured into 59 functional groups categorized by feeding behavior and habitat preferences. Coral bleaching thresholds were set at 28°C, with adaptive capacity represented by a 0.2°C tolerance increase per decade. While lower trophic levels were modeled as biomass aggregations, key species including coral genera, parrotfish, monk seals, and sea turtles received detailed age-structured representation. Historical fishing patterns informed the configuration of six gear-specific fishery sectors. [@cr-atlantis-trophic-pyramid]
+
+:::{#cr-atlantis-trophic-pyramid}
+![](/assets/images/lansing/atlantis_trophic_pyramid.png){.resize-img-60}
+:::
+
+Model outputs were analyzed using a comprehensive vulnerability assessment framework adapted from Marshall et al. (2009), which integrates exposure, sensitivity, and adaptive capacity to quantify ecosystem and community-level climate risks across the MHI. [@cr-vulnerability-framework]
+
+Ecological exposure was quantified using Atlantis model projections spanning 2020-2100 under three climate scenarios. Environmental stressors including OA (declining pH), warming sea surface temperatures, and increased macroalgal biomass served as indicators of heightened exposure. Conversely, metrics of ecological integrity (coral cover, reef herbivore biomass, fish diversity, targeted fishery species abundance, megafauna populations, and mean trophic level) were incorporated as exposure-buffering indicators that enhance system resilience.
+
+Community sensitivity was assessed through spatial analysis of marine resource dependence across the MHI. This evaluation encompassed both commercial and recreational fishery reliance, incorporating catch volumes, revenue streams, recreational fishing effort, and coastal site utilization patterns to characterize differential community vulnerability to marine ecosystem changes.  
+
+:::{#cr-vulnerability-framework}
+![](/assets/images/lansing/vulnerability_framework_marshall_2009.png){.resize-img-60}
+:::
+
+Adaptive capacity was evaluated using the five-dimensional framework developed by Cinner et al. (2018), which encompasses assets, flexibility, social organization, learning, and agency as core determinants of community resilience. Assets were quantified through median household income, while flexibility was measured using occupational diversity indices. Social organization was assessed via internet access, reflecting contemporary patterns of community engagement and information sharing in policy processes. Learning capacity was evaluated through educational attainment rates (percentage of population with bachelor's degrees or higher), and agency was characterized using dual indicators of English proficiency and poverty status, both representing individual and collective capacity for autonomous decision-making. [@cr-adaptive-capacity]
+
+Data Envelopment Analysis (DEA) was employed to construct composite indices for each vulnerability dimension. This non-parametric approach scores system performance across multiple indicators without requiring subjective weighting schemes, instead deriving weights empirically from observed data patterns. The final vulnerability index was calculated as: $$V = \frac{E \times S}{AC},$$ reflecting the established relationship where exposure and sensitivity amplify vulnerability while adaptive capacity provides buffering effects.
+
+:::{#cr-adaptive-capacity}
+![](/assets/images/lansing/adaptive_capacity_cinner_2018.png){.resize-img-60}
+:::
+
+Model simulations projected substantial declines in coral biomass under all climate scenarios. SSP1-2.6 demonstrated the greatest resilience, retaining approximately 60% of initial biomass by 2100. SSP2-4.5 showed moderate losses, declining to roughly 40% of baseline levels. SSP3-7.0 exhibited the most severe impacts, with coral biomass declining to approximately 25% of initial values by century's end. Coral declines were immediate in response to rising temperature, with additional delayed effects from OA. [@cr-coral-biomass]
+
+:::{#cr-coral-biomass}
+![](/assets/images/lansing/corals_biomass.png){.resize-img-60}
+:::
+
+Three ecosystem integrity metrics exhibit consistent declining trends throughout the century, with degradation severity directly proportional to climate scenario intensity across Shannon diversity, coral-to-algal ratios, and mean trophic levels. [@cr-grouped-biomass]
+
+:::{#cr-grouped-biomass}
+![](/assets/images/lansing/grouped_summary_biomass.png)
+:::
+
+Algal producer biomass showed no general decline across climate scenarios, instead demonstrating substantial increases that buffered habitat loss from coral degradation through enhanced macroalgal food resources. [@cr-algal-producers-biomass]
+
+:::{#cr-algal-producers-biomass}
+![](/assets/images/lansing/algal_producers_biomass.png){.resize-img-60}
+:::
+
+Reef herbivore biomass remained stable across all scenarios, reaching peak levels under SSP1-2.6 despite significantly reduced algal availability, likely reflecting enhanced habitat complexity from reduced coral loss in lower climate stress scenarios. [@cr-reef-herbivore-biomass]
+
+:::{#cr-reef-herbivore-biomass}
+![](/assets/images/lansing/reef_herbivores_biomass.png){.resize-img-60}
+:::
+:::
+
+Vulnerability index scores were spatially distributed across MHI communities, with the highest decile (top 10%) specifically labeled for analysis. Interpretations focus on identifying primary indicators driving elevated vulnerability scores, particularly examining communities with extreme exposure-sensitivity values or diminished adaptive capacity metrics.
+
+:::{.cr-section layout="sidebar-right"}
+
+O'ahu communities exhibit high sensitivity due to combined commercial fishery dependence and recreational site pressure. Outer island communities show elevated sensitivity primarily from recreational fishery engagement, with North Kona, Wailuku, and Līhu'e representing peak vulnerability zones. [@cr-map-sensitivity]
+
+:::{#cr-map-sensitivity}
+![](/assets/images/lansing/map_sensitivity.png){.resize-img-60}
+:::
+
+Community adaptive capacity scores range from 0.83-1.0 across the MHI, with labeled communities representing the lowest decile. Lahaina exhibits reduced adaptive capacity driven by lower educational attainment and English proficiency. North Kohala demonstrates moderate values across all indicators without notable strengths. Papaikou-Wailea shows below-average performance on most metrics except occupational diversity. Pahoa-Kalapana records the lowest income and highest poverty rates of all assessed communities. Ka'u displays substantially reduced income levels and educational attainment as primary limiting factors. [@cr-map-ac]
+
+:::{#cr-map-ac}
+![](/assets/images/lansing/map_ac.png){.resize-img-60}
+:::
+
+Initial conditions show uniformly low exposure across MHI communities. Mid-century projections indicate rising exposure in Maui County communities. End-century outcomes shift peak exposure away from Maui County, with high-exposure communities characterized by degraded ecosystem integrity metrics (reef fish diversity, herbivore biomass, targeted fishery species) and above-average temperature increases. Honolulu records the highest exposure index under SSP3 end-century projections. Primary exposure drivers include declining ecosystem integrity indicators and elevated temperature increases, with progressive concentration of environmental stress in urban coastal zones from dispersed moderate impacts to concentrated high-risk areas. [@cr-map-exposure-gif]
+
+:::{#cr-map-exposure-gif}
+![](/assets/images/lansing/map_exposure_gif_control_ens_updated2.png){.resize-img-60}
+:::
+
+Vulnerability indices at the end-century reveal distinct community risk profiles across SSP1-3 scenarios. Ewa and Honolulu emerge as most vulnerable communities under SSP2-3, with Ewa driven by high exposure and above-average sensitivity, while Honolulu exhibits maximum sensitivity combined with moderate exposure (SSP2) escalating to highest exposure (SSP3). South Kona and Waianae represent peak vulnerability communities under SSP1-2, with South Kona recording highest exposure scores in SSP1 and second-highest in SSP2. Waianae demonstrates maximum sensitivity with moderate exposure in SSP1-2, but notably shifts to relatively lower vulnerability in SSP3 despite maintaining maximum sensitivity, due to comparatively reduced exposure levels relative to other communities. [@cr-map-vulnerability-gif]
+
+:::{#cr-map-vulnerability-gif}
+![](/assets/images/lansing/map_vulnerability_gif_control_ens_updated2.png){.resize-img-60}
+:::
+:::
 
 ## The socioeconomic impact of climate change on coral reef in the MHI
 
