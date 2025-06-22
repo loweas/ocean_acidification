@@ -1,33 +1,268 @@
 ---
-title: "Project Title"
-# subtitle: ""
-author: "Lansing Perng"
-description: "Brief summary of the project."
-format: html
+title: "Hawai'i's Coral Reefs and Their Vulnerable Foundations"
+author: 
+  - name: Lansing Perng
+  - name: Lucia Hošeková
+  - name: Ashley Lowe Mackenzie
+  - name: <i>Others...</i>
+language:
+  en:
+    title-block-author-single: "Author"
+format:
+  closeread-html:
+    toc: false
+    embed-resources: true
+    cr-style:
+       narrative-background-color-overlay: 'rgba(255,255,255,0)'
+       narrative-background-color-sidebar: 'rgba(255,255,255,0)'
+       narrative-text-color-overlay: '#000000'
+       narrative-text-color-sidebar: '#000000'
+       section-background-color: 'rgba(255,255,255,0)'
+       narrative-font-family: 'AccanthisADFStd-Bold'
+       poem-font-family: 'AccanthisADFStd-Bold'
 ---
 
-<!-- Hero section -->
-<!-- <div class="text-center my-5"> -->
-<!-- ![](assets/logos/uhm_logo.png){fig-alt="Placeholder hero image" width="50%"} -->
-<!-- </div> -->
+```{=html}
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap");
 
-## Welcome to *Project Title*
+  /* Container for the dropdown navbar */
+  .nav-dropdown {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the contents */
+  }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.  
-Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+  /* Toggle button styled as a circle */
+  #nav-toggle {
+    width: 50px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(250, 250, 250, 1);
+    border: 1px solid #004d40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem auto; /* Center the button */
+    cursor: pointer;
+  }
 
-## What is *Project Title*?
+  /* Ensure the SVG icons have consistent sizing */
+  #nav-toggle svg {
+    width: 24px;
+    height: 24px;
+    color: #004d40;
+  }
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-- **Lorem ipsum**: dolor sit amet  
-- **Consectetur**: adipiscing elit  
-- **Integer**: nec odio
+  /* Navigation links container */
+  .storymap-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    max-height: 500px;
+    margin: 0.5rem auto;
+    justify-content: center;
+    width: fit-content;
+    flex-direction: column;
+  }
 
-## Key Features
+  /* Collapsed state: hides the links */
+  .storymap-nav.collapsed {
+    max-height: 0;
+    padding: 0;
+    display: none;
+  }
 
-1. **Feature One**  
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-2. **Feature Two**  
-   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
-3. **Feature Three**  
-   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+  /* Styling for individual navigation links */
+  .storymap-nav a {
+    display: flex;
+    background: rgba(250, 250, 250, 1);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #004d40;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #004d40;
+    transition: border-color 0.2s;
+    white-space: nowrap;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .storymap-nav a.active,
+  .storymap-nav a:hover {
+    border-bottom: 3px solid #e67e22;
+  }
+
+  .align-right {
+    float: right;
+    margin-left: 1em;
+  }
+
+  /* Scale all images up to 700px wide, preserve aspect ratio */
+  .cr-section img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  #quarto-document-content h1 {
+    font-weight: 500;
+    font-size: 2.8em;
+    line-height: 1;
+  }
+
+  h2, .h2 {
+    padding-bottom: .5rem;
+    text-align: left;
+    font-size: 1.8em;
+  }
+
+  #quarto-document-content {
+    font-size: 0.95em;
+  }
+
+  /* For larger screens, match the navbar width to content width */
+  @media (min-width: 768px) {
+    .storymap-nav {
+      max-width: 800px; /* Limit width on larger screens */
+    }
+  }
+
+  /* Responsive rules below 570px: stack into a single column */
+  @media (max-width: 570px) {
+    .storymap-nav {
+      flex-direction: column;
+      width: 90%;
+      max-width: 300px;
+    }
+    
+    .storymap-nav a {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .cr-section .sticky-col .sticky-col-stack {
+      display: grid;
+      height: 100dvh;
+      position: sticky;
+      overflow: hidden;
+      top: -150px;
+    }
+  }
+</style>
+
+<!-- Dropdown Navbar Container -->
+<div class="nav-dropdown">
+  <!-- Toggle Button with SVG icon placeholder -->
+  <button id="nav-toggle">
+    <span id="nav-icon"></span>
+  </button>
+  <!-- Navigation Links -->
+  <div class="storymap-nav" id="nav-links">
+    <a href="#downscaled-projections-and-novelty-of-oa-in-the-mhi" class="active">Ocean Acidification</a>
+    <a href="#coral-reef-fishery-outcomes-in-the-mhi-under-climate-change">Reef Ecosystems</a>
+    <a href="#the-socioeconomic-impact-of-climate-change-on-coral-reef-in-the-mhi">Socioeconomic Impact</a>
+    <a href="#future-directions-for-building-resilience-for-hawaiis-reefs-and-communities">Building Resilience</a>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  const navIcon = document.getElementById('nav-icon');
+  const navAnchorLinks = navLinks.querySelectorAll('a');
+
+  // SVG icons
+  const hamburgerSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>`;
+  const closeSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+
+  let isOpen = false;      // Whether the menu is open
+  let manualOpen = false;  // Whether the user opened the menu manually
+
+  // Utility to update the icon
+  function updateIcon() {
+    navIcon.innerHTML = isOpen ? closeSVG : hamburgerSVG;
+  }
+
+  // Open the menu
+  function openMenu() {
+    isOpen = true;
+    navLinks.classList.remove('collapsed');
+    updateIcon();
+  }
+
+  // Close the menu
+  function closeMenu() {
+    isOpen = false;
+    navLinks.classList.add('collapsed');
+    updateIcon();
+    manualOpen = false; // Reset manualOpen any time the menu is closed
+  }
+
+  // Toggle the menu
+  toggleButton.addEventListener('click', function() {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+      manualOpen = true; // User opened it, so set manualOpen
+    }
+  });
+
+  // Nav link click closes menu, but does not mess with manualOpen
+  navAnchorLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navAnchorLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+      closeMenu();
+    });
+  });
+
+  // On scroll: only auto-close the menu if it is open AND wasn't opened manually
+  window.addEventListener('scroll', function() {
+    if (isOpen && !manualOpen && window.scrollY > 50) {
+      closeMenu();
+    }
+    // If the menu is open and WAS opened manually, do NOT auto-close
+    // (Menu will stay open until the user closes it)
+  });
+
+  // On load, always start closed
+  closeMenu();
+});
+</script>
+```
+
+<br>Coral reefs form the backbone of Hawai'i's nearshore ecosystems, supporting high biodiversity and delivering substantial ecological and economic benefits. Although they cover just 0.2% of the seafloor globally, Hawaiian coral reefs account for approximately 85% of all coral reefs in the United States. These ecosystems support about a quarter of all marine species and provide essential services, including fishery habitat, coastal protection, recreation, and tourism. In the Main Hawaiian Islands (MHI), coral reefs generate roughly $800 million per year in value from fishing, recreation, and other activities.
+
+Climate change poses growing threats to Hawai'i's coral reefs. Two primary drivers of risk are rising ocean temperatures and ocean acidification (OA). Warming ocean waters can disrupt the symbiosis between corals and their algae, leading to coral bleaching events. Prolonged or severe bleaching can result in widespread coral mortality. Simultaneously, increased concentrations of atmospheric carbon dioxide (CO₂) are absorbed by the ocean, increasing the concentration of hydrogen ions by about 30% since pre-industrial times and lowering the saturation state of aragonite, a mineral essential for coral skeletons. These changes make it more difficult for corals to grow and maintain their structures and can lead to cascading effects throughout the reef ecosystem and food web.
+
+Understanding reef vulnerability and assessing economic consequences of degradation has become increasingly important as human dependence on coral reefs continues. However, much of our understanding comes from global models that fail to capture the fine-scale variability and local oceanographic conditions essential for Hawai'i, limiting the scientific foundation for effective management and policy decisions. Our study addresses this gap by combining high-resolution projections of ocean acidification and temperature with spatially explicit ecosystem modeling that tracks coral, fish, and fishery changes under three climate scenarios, while linking these ecological projections to recreational reef use values to provide an integrated perspective on climate-driven impacts to both marine ecosystems and dependent communities.
+
+## Downscaled Projections and Novelty of OA in the MHI
+
+## Coral reef fishery outcomes in the MHI under climate change
+
+## The socioeconomic impact of climate change on coral reef in the MHI
+
+## Future directions for building resilience for Hawai'i's reefs and communities
+
+Our research demonstrates that coral reefs in the MHI are projected to face unprecedented OA and warming, with far-reaching consequences for reef ecosystems, fisheries, and coastal communities. Across all modeled scenarios, significant declines in coral biomass are expected, accompanied by changes throughout the food web and negative effects on recreational and economic value. The magnitude and timing of these impacts depend on future emissions and will vary by location, with some areas and communities facing greater risks than others. While local management actions can provide some benefits, their effectiveness is limited as climate stress intensifies.
+
+Our work emphasizes the importance of reducing greenhouse gas emissions, strengthening local management where possible, and investing in ongoing monitoring to improve our understanding of OA and ecosystem change. Adaptation strategies that are tailored to the spatial variability of impacts and that address both ecological and social vulnerability will be key to building resilience for MHI reefs and the people who depend on them. Further research should continue to refine models, incorporate additional ecosystem services, and inform policies that support both conservation and community well-being.
+
+<!-- :::{.cr-section layout="sidebar-left"}
+::: -->

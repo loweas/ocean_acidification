@@ -9,28 +9,18 @@ website:
   title: "Ocean Acidification"
   back-to-top-navigation: true
   search: true
-  navbar: 
-    background: white
-    search: true
-    left:
-      - text: "About"
-        href: index.qmd
   page-footer: |
-    ![](/assets/logos/uhm_logo.png){width=40%}
-    <br><br>
+    ![](/assets/logos/soest_logo.png){width=25%}&nbsp;&nbsp;
+    ![](/assets/logos/nrem_logo.png){width=15%}&nbsp;&nbsp;&nbsp;&nbsp;
+    ![](/assets/logos/uh_logo.png){width=15%}
+    ![](/assets/logos/oap_logo.png){width=38%} 
         
 format:
   html:
     theme: litera
     page-layout: full
     link-external-newwindow: true
-    code-fold: true
-    code-overflow: wrap
-    code-annotations: hover
     smooth-scroll: true
-    toc: true
-    toc-depth: 4
-    toc-location: left
 
 execute:
   message: false
