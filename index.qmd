@@ -1,8 +1,8 @@
 ---
 title: "Hawai'i's Coral Reefs and Their Vulnerable Foundations"
 author: 
-  - name: Lansing Perng
   - name: Lucia Hošeková
+  - name: Lansing Perng
   - name: Ashley Lowe Mackenzie
   - name: <i>Others...</i>
 language:
@@ -105,6 +105,10 @@ format:
 
   body, section, header {
     background-color: white !important;
+  }
+  
+  p, li {
+    font-family: system-ui;
   }
 
   #quarto-document-content {
@@ -479,19 +483,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 Climate change poses growing threats to Hawai'i's coral reefs. Two primary drivers of risk are rising ocean temperatures and ocean acidification (OA). Warming ocean waters can disrupt the symbiosis between corals and their algae, leading to coral bleaching events. Prolonged or severe bleaching can result in widespread coral mortality. Simultaneously, increased concentrations of atmospheric carbon dioxide (CO₂) are absorbed by the ocean, increasing the concentration of hydrogen ions by about 30% since pre-industrial times and lowering the saturation state of aragonite, a mineral essential for coral skeletons. These changes make it more difficult for corals to grow and maintain their structures and can lead to cascading effects throughout the reef ecosystem and food web.
 
-Understanding reef vulnerability and assessing economic consequences of degradation has become increasingly important as human dependence on coral reefs continues. However, much of our understanding comes from global models that fail to capture the fine-scale variability and local oceanographic conditions essential for Hawai'i, limiting the scientific foundation for effective management and policy decisions. Our study addresses this gap by combining high-resolution projections of ocean acidification and temperature with spatially explicit ecosystem modeling that tracks coral, fish, and fishery changes under three climate scenarios, while linking these ecological projections to recreational reef use values to provide an integrated perspective on climate-driven impacts to both marine ecosystems and dependent communities.
+Assessing reef vulnerability and quantifying ecosystem degradation require spatially explicit analyses that capture both ecological dynamics and community-level impacts. However, much of our understanding comes from global models that fail to capture the fine-scale variability and local oceanographic conditions essential for Hawai‘i, limiting the scientific foundation for effective management and policy decisions.
+
+Our study addresses this gap through integrated modeling. We combine high-resolution projections of OA and temperature with spatially explicit ecosystem modeling that tracks coral, fish, and fishery changes under three climate scenarios. These ecological projections are linked to recreational reef use values, providing an integrated perspective on climate-driven impacts to both marine ecosystems and dependent communities.
 
 ## Downscaled Projections and Novelty of OA in the MHI
 
 :::{.cr-section layout="sidebar-left"}
 
-Understanding how OA affects Hawai'i requires considering the islands' unique physical and oceanographic context. The MHI are located within the North Pacific Subtropical Gyre, a major ocean current system that shapes local water temperature, chemistry, and other characteristics.  [@cr-north-pacific-subtropical-gyre]
+OA impacts in Hawai‘i are shaped by the islands’ unique physical and oceanographic context. The MHI are located within the North Pacific Subtropical Gyre, a major ocean current system that shapes local water temperature, chemistry, and other characteristics. [@cr-north-pacific-subtropical-gyre]
 
 :::{#cr-north-pacific-subtropical-gyre}
 ![](/assets/images/lucia/north_pacific_gyre.png){.resize-img}
 :::
 
-The region's steep bathymetry, with volcanic mountains rising from an abyssal plain over 6,000 meters deep to heights up to 4,000 meters above sea level, interacts with persistent northeasterly trade winds. This interaction disrupts currents, generating eddies and localized upwelling, as reflected in the annual wind stress curl. [@cr-ocean-bathymetry]
+The region's steep bathymetry, with volcanic mountains rising from an abyssal plain over 6,000 meters deep to heights up to 4,000 meters above sea level, interacts with persistent northeasterly trade winds. This interaction disrupts currents, generating eddies and localized upwelling that drive biogeochemical dynamics. [@cr-ocean-bathymetry]
 
 :::{#cr-ocean-bathymetry}
 ![](/assets/images/lucia/ocean_bathymetry.png)
@@ -503,52 +509,53 @@ These dynamic oceanographic conditions influence how OA impacts coral reefs, whi
 ![](/assets/images/lucia/fringing_reefs.png)
 :::
 
-Global Climate Models (GCMs) lack the fine spatial resolution needed for robust local assessments in the MHI. We addressed this limitation by producing the first dynamically downscaled projections of ocean acidification for the region spanning 2000-2100 using a coupled Regional Ocean Modeling System (ROMS) and Carbon, Ocean Biogeochemistry and Lower Trophics (COBALT) model nested within Community Earth System Model 2 (CESM2) outputs. [@cr-roms-cobalt]
+Global Climate Models (GCMs), like the Community Earth System Model Version 2 (CESM2), lack the fine spatial resolution needed for robust local assessments in the MHI. We addressed this limitation by producing the first dynamically downscaled projections of OA for the region spanning 2000-2100 using a coupled Regional Ocean Modeling System (ROMS) and Carbon, Ocean Biogeochemistry and Lower Trophics (COBALT) model nested within CESM2 outputs. [@cr-roms-cobalt]
 
 :::{#cr-roms-cobalt}
 ![](/assets/images/lucia/cesm2_roms_cobalt_models.gif)
 :::
-:::
 
-Three climate scenarios representing different emission pathways were analyzed:
+Three climate scenarios representing different emission pathways were analyzed: [@cr-ssps]
 
-- SSP1-2.6: Aggressive emission reductions (CO₂ declining to 445 ppm by 2100)
-- SSP2-4.5: Moderate emission reductions (CO₂ reaching 603 ppm by 2100)
-- SSP3-7.0: Current emission trends continue (CO₂ reaching 871 ppm by 2100)
+- SSP1-2.6: Strongly declining emissions (CO₂ peaks at 474 ppm in 2063, declining to 445 ppm by 2100)
+- SSP2-4.5: Slowly declining emissions (CO₂ reaching 603 ppm by 2100)
+- SSP3-7.0: Increasing emissions, baseline outcome of current trends (CO₂ reaching 871 ppm by 2100)
 
-:::{.cr-section layout="sidebar-left"}
-
-These Shared Socioeconomic Pathways (SSPs) represent plausible futures based on different assumptions about global climate policy, economic development, and population growth. We also introduce a climate novelty metric to quantify how far and how quickly future OA conditions are projected to exceed the range of historical variability, providing a framework for contextualizing ecological risk. [@cr-ssps]
+These Shared Socioeconomic Pathways (SSPs) represent plausible futures based on different assumptions about global climate policy, economic development, and population growth. 
 
 :::{#cr-ssps}
 ![](/assets/images/lucia/ssps_of_interest.png)
 :::
+:::
 
-Our projections track three key indices that measure OA's impact on coral calcification: aragonite saturation state (Ωₐ), pH, and substrate-to-inhibitor ratio (SIR). Under SSP3-7.0, all OA indices decline rapidly and continuously; under SSP1-2.6, the decline is slower and may stabilize or slightly reverse by the end of the century. These projected decreases in Ωₐ, pH and SIR indicate increasing OA and suggest that coral reefs may face greater difficulty maintaining calcification rates, with the extent and timing of these shifts determined by future emissions trajectories. [@cr-temp-dic-trends]
+:::{.cr-section layout="sidebar-left"}
+
+Our projections track three key indices that measure OA's impact on coral calcification: aragonite saturation state (Ωₐ), pH, and substrate-to-inhibitor ratio (SIR, [HCO₃⁻]/[H⁺]). Under SSP3-7.0, all OA indices decline rapidly and continuously throughout the century. SSP2-4.5 exhibits intermediate trends, with values stabilizing mid-century. Under SSP1-2.6, the decline is slower and may stabilize or slightly reverse after 2060. These projected decreases in Ωₐ, pH and SIR indicate increasing OA and suggest that coral reefs may face greater difficulty maintaining calcification rates, with the extent and timing of these shifts determined by future emissions trajectories. [@cr-temp-dic-trends]
 
 :::{#cr-temp-dic-trends}
 ![](/assets/images/lucia/arag_sat_ph_sir_trends.png){.resize-img}
 :::
 
-We introduced a novelty metric to determine when future ocean conditions might move outside the range that coral reefs have experienced in recent history. This metric quantifies how much projected values of OA indices—Ωₐ, pH, and SIR—depart from the natural variability observed during a reference period (2005–2020), expressed as the ratio of the anomaly to historical variability. [@cr-novelty-metric-intro]
+We also introduce a climate novelty metric to determine when future ocean conditions might move outside the range that coral reefs have experienced in recent history, providing a framework for contextualizing ecological risk. This metric quantifies how much projected values of OA indices, Ωₐ, pH, and SIR, depart from the natural variability observed during a reference period (2005–2020), expressed as the ratio of the anomaly to historical variability. For example, a novelty value of 2 indicates that the anomaly is twice the reference variability, suggesting conditions substantially different from recent historical experience. This approach allows us to identify when and where coral reefs may encounter unprecedented chemical conditions that could exceed their adaptive capacity. [@cr-novelty-metric-concept]
 
-:::{#cr-novelty-metric-intro}
-![](/assets/images/lucia/novelty_threshold_exceedance.png)
+:::{#cr-novelty-metric-concept}
+![](/assets/images/lucia/novelty_metric_concept.png)
 :::
 
-Results show that, under all scenarios, Ωₐ will eventually surpass historical variability ranges, with the magnitude and timing of change strongly dependent on future CO₂ emissions. Under SSP3-7.0, mean Ωₐ novelty reaches approximately 12 times the reference variability by 2100, while SIR novelty reaches 9 times reference levels. In contrast, SSP1-2.6 shows much lower impacts, with Ωₐ novelty peaking at 3 times reference variability mid-century before declining to around 1 by century's end. SSP2-4.5 demonstrates intermediate outcomes, with Ωₐ novelty plateauing at approximately 6 times reference variability. [@cr-novelty-metric-results]
+Results show that, under all scenarios, Ωₐ will eventually surpass historical variability ranges, with the magnitude and timing of change strongly dependent on future CO₂ emissions. Under SSP3-7.0, mean Ωₐ novelty reaches approximately 12 times the reference variability by 2100, while SIR novelty reaches 9 times reference levels. In contrast, SSP1-2.6 shows much lower impacts, with Ωₐ novelty peaking at 3 times reference variability mid-century before declining to around 1 by century's end. For SIR, novelty values remain low in SSP1-2.6, peaking at about 3 before gradually returning near present-day levels, while SSP2-4.5 plateaus at intermediate values of around 6 for Ωₐ and 4 for SIR by 2100. These results indicate that, even under the lowest emission scenario, some departure from historical conditions is unavoidable, but the extent of change and potential risk to coral reef adaptation are much greater under higher emissions. The shaded regions in the figure reflect the range across nearshore locations, highlighting spatial variability in projected outcomes. [@cr-novelty-metric-results]
 
 :::{#cr-novelty-metric-results}
 ![](/assets/images/lucia/novelty_metric_results.jpg){.resize-img}
 :::
 
-The spatial distribution of novelty was also analyzed, revealing that both the timing and intensity of exposure to novel conditions vary by location, with windward (northeast-facing) coastlines generally showing higher novelty values. By the end of the century, nearly all reef areas are projected to face ocean conditions far outside the range of their recent historical experience. This analysis provides a framework for anticipating the timing and location of unprecedented OA exposure across Hawaiian reefs. [@cr-spatial-novelty-patterns]
+The spatial distribution of novelty was also analyzed, revealing that both the timing and intensity of exposure to novel conditions vary by location, with windward (northeast-facing) coastlines generally showing higher novelty values. The spatial patterns differ between OA indices: for Ωₐ, novelty tends to increase from south to north, while for SIR, the highest values are found along eastern coastlines. Leeward (southwest) areas, which experience higher baseline variability, generally show lower novelty. These patterns highlight pronounced differences in potential ecological risk across the islands and emphasize the importance of local conditions in shaping future OA impacts. [@cr-spatial-novelty-patterns]
 
 :::{#cr-spatial-novelty-patterns}
 ![](/assets/images/lucia/spatial_novelty_patterns.jpg)
 :::
-
 :::
+
+By the end of the century, nearly all reef areas are projected to experience ocean conditions outside the range observed in recent history. The high-resolution, scenario-based projections from this analysis characterize the local chemical and physical environments that shape coral reef exposure, providing the environmental inputs necessary for evaluating ecosystem responses under changing conditions.
 
 ## Coral reef fishery outcomes in the MHI under climate change
 
@@ -645,6 +652,16 @@ Vulnerability indices at the end-century reveal distinct community risk profiles
 :::
 
 ## The socioeconomic impact of climate change on coral reef in the MHI
+
+Projections of coral reef decline under climate change have major implications for the well-being of communities across the MHI, especially considering the central role reefs play in supporting coastal recreation, food security, and local economies. We developed a spatially explicit framework that links ecological projections from the Atlantis model with an economic valuation of changes in recreational reef use across the MHI to quantify these impacts.
+
+Our approach integrates several data sources and methods. First, we paired site-specific projections of future coral cover with detailed information on coastal access sites, recreational amenities, and state level population forecasts under each climate scenario. We then estimated changes in the welfare value of recreation using a parameterized model derived from a travel cost study of Maui residents, accounting for site amenities, ecological conditions and resident income. This allowed us to estimate both annual and cumulative welfare losses for residents under the three climate scenarios.
+
+Our results show that climate-driven reef loss is projected to lead to substantial reductions in recreational value across the MHI. The greatest potential welfare loss scenarios are projected to occur under the lower climate emission scenarios due to larger increases in population under the corresponding scenarios, i.e. more individuals to experience the losses of coral cover. By the end of the century, cumulative welfare losses for residents are projected to be around $2.1 to $3.3 billion, with most impacts concentrated in the most populous islands. Spatial analysis reveals pronounced disparities: some communities face welfare losses more than five times greater per resident than others. Using the EPA's EJScreen, we further identified that many of the most affected locations are home to disadvantaged communities which face higher risk of environmental hazards.
+
+Important uncertainties and limitations exist in this analysis. The methodology focused primarily on residents and does not include tourism values, greatly underestimating the overall economic values associated with coral reef decline. Projections of coral cover and population change are subject to model assumptions and future policy decisions. Nevertheless, the framework allows for transparent mapping of vulnerabilities and identifies where the need for adaptation or compensation may be greatest.
+
+Our analysis reveals the economic stakes of climate-driven coral reef decline, the importance of spatial targeting in future management, and the need for policies that address both ecological resilience and social equity. Ongoing work should refine economic valuation, expand to other ecosystem services, and explore the benefits of different adaptation and restoration strategies for both people and reefs.
 
 ## Future directions for building resilience for Hawai'i's reefs and communities
 
