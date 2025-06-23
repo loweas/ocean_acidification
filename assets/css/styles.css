@@ -1,0 +1,370 @@
+/* Container for the dropdown navbar */
+.nav-dropdown {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the contents */
+}
+
+/* Toggle button styled as a circle */
+#nav-toggle {
+  width: 50px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(250, 250, 250, 1);
+  border: 1px solid #004d40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem auto; /* Center the button */
+  cursor: pointer;
+}
+
+/* Ensure the SVG icons have consistent sizing */
+#nav-toggle svg {
+  width: 24px;
+  height: 24px;
+  color: #004d40;
+}
+
+/* Navigation links container */
+.storymap-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  max-height: 500px;
+  margin: 0.5rem auto;
+  justify-content: center;
+  width: fit-content;
+  flex-direction: column;
+}
+
+/* Collapsed state: hides the links */
+.storymap-nav.collapsed {
+  max-height: 0;
+  padding: 0;
+  display: none;
+}
+
+/* Styling for individual navigation links */
+.storymap-nav a {
+  display: flex;
+  background: rgba(250, 250, 250, 1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #004d40;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #004d40;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+  text-align: center;
+  flex-direction: column;
+}
+
+.storymap-nav a.active,
+.storymap-nav a:hover {
+  border-bottom: 3px solid #e67e22;
+}
+
+:root {
+  --mermaid-edge-color: black;
+}
+
+body,
+section,
+header {
+  background-color: white !important;
+}
+
+p,
+li {
+  font-family: system-ui;
+}
+
+#quarto-document-content {
+  font-size: 15pt;
+  margin-bottom: 20vh;
+  padding-bottom: 10vh;
+  z-index: 1;
+}
+
+#quarto-document-content h1 {
+  font-weight: 500;
+  font-size: 3em;
+  line-height: 1;
+}
+
+.cr-section {
+  background-color: transparent !important;
+}
+
+.cr-section .sticky-col {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.cr-section.sidebar-left .sticky-col {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.cr-section.sidebar-left .narrative-col {
+  background-color: transparent;
+  min-width: 40svw;
+  padding-left: 80px;
+}
+
+/* Override the padding for the first block */
+.cr-section.cr-section.sidebar-left .narrative-col > *:first-child {
+  padding-block-start: 40svh;
+}
+
+.cr-section.overlay-center .narrative-col .narrative {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  text-align: center;
+  min-width: 50svw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Override the padding for the first block */
+.cr-section.overlay-center .narrative-col > *:first-child {
+  padding-block-start: 50svh;
+}
+
+.cr-section.overlay-center .narrative-col .trigger .narrative {
+  padding: 0em;
+}
+
+.cr-section.overlay-center .narrative-col .trigger .narrative p {
+  padding: 1% !important;
+}
+
+.hl {
+  color: black;
+  font-weight: 400;
+  padding: 0.05rem 0.25rem;
+  line-height: 1.8;
+}
+
+.resize-img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resize-img-60 {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar-right .sticky-col {
+  grid-column: 1;
+}
+
+.sidebar-right {
+  grid-template-columns: 1fr var(--cr-narrative-sidebar-width);
+  margin-right: 60px;
+}
+
+@media (min-width: 370px) and (max-width: 570px) {
+  .cr-section.sidebar-left .narrative-col,
+  .cr-section.sidebar-right .narrative-col,
+  .cr-section.overlay-left .narrative-col,
+  .cr-section.overlay-right .narrative-col,
+  .cr-section.overlay-center .narrative-col {
+    background-color: transparent;
+  }
+
+  .cr-section.sidebar-left .narrative-col .narrative > *,
+  .cr-section.sidebar-right .narrative-col .narrative > *,
+  .cr-section.overlay-left .narrative-col .narrative > *,
+  .cr-section.overlay-right .narrative-col .narrative > *,
+  .cr-section.overlay-center .narrative-col .narrative > * {
+    background-color: rgba(250, 250, 250, 0.85);
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: center;
+    min-width: 60svw;
+    position: absolute;
+    left: 50%;
+    z-index: 200;
+    transform: translate(-50%, -50%);
+  }
+
+  .cr-section.sidebar-left .sticky-col {
+    padding-left: 30px;
+    padding-right: 30px;
+    transform: translate(-130px, -50px);
+  }
+
+  .resize-img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* mobile sizing (bootstrap: xs) is always overlay-center */
+@media (min-width: 571px) and (max-width: 870px) {
+  #quarto-document-content h1 {
+    font-size: 2.5em;
+    line-height: 1;
+  }
+
+  .cr-section.sidebar-left .narrative-col,
+  .cr-section.sidebar-right .narrative-col,
+  .cr-section.overlay-left .narrative-col,
+  .cr-section.overlay-right .narrative-col,
+  .cr-section.overlay-center .narrative-col {
+    background-color: transparent;
+  }
+
+  .cr-section.sidebar-left .narrative-col .narrative > *,
+  .cr-section.sidebar-right .narrative-col .narrative > *,
+  .cr-section.overlay-left .narrative-col .narrative > *,
+  .cr-section.overlay-right .narrative-col .narrative > *,
+  .cr-section.overlay-center .narrative-col .narrative > * {
+    background-color: rgba(250, 250, 250, 0.85);
+    border-radius: 5px;
+    padding: 5px;
+    color: black;
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: center;
+    min-width: 60svw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+  .cr-section .narrative-col .trigger .narrative {
+    padding: 0em;
+  }
+
+  .cr-section.sidebar-left .sticky-col {
+    padding-left: 30px;
+    padding-right: 30px;
+    /* transform: translate(-30%, 0%); */
+  }
+
+  .resize-img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Scale all images up to 700px wide, preserve aspect ratio */
+/* .cr-section img {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  #quarto-document-content h1 {
+    font-weight: 500;
+    font-size: 2.8em;
+    line-height: 1;
+  }
+
+  h2, .h2 {
+    border-bottom: 0px;
+    padding-bottom: .5rem;
+    text-align: center;
+    font-size: 1.8em;
+
+  }
+
+  #quarto-document-content {
+    font-size: 0.95em;
+  } */
+
+/* .cr-section .sticky-col .sticky-col-stack {
+    display: grid;
+    height: 85dvh;
+    margin-bottom: 10em;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+  } */
+
+/* For larger screens, match the navbar width to content width */
+/* @media (min-width: 768px) {
+    .storymap-nav {
+      flex-direction: column;
+      width: 90%;
+      max-width: 300px;
+    }
+    
+    .storymap-nav a {
+      width: 100%;
+      text-align: center;
+    }
+
+    .cr-section .sticky-col .sticky-col-stack {
+      display: grid;
+      height: 85dvh;
+      margin-bottom: 10em;
+      position: sticky;
+      overflow: hidden;
+      top: 0;
+    }
+  } */
+
+/* Responsive rules below 570px: stack into a single column */
+/* @media (max-width: 570px) {
+    .storymap-nav {
+      flex-direction: column;
+      width: 90%;
+      max-width: 300px;
+    }
+    
+    .storymap-nav a {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .cr-section .sticky-col .sticky-col-stack {
+      display: grid;
+      height: 85dvh;
+      margin-bottom: 10em;
+      position: sticky;
+      overflow: hidden;
+      top: 0;
+    }
+  } */
+
+/* .page-columns,
+  .page-columns h2,
+  .page-columns .h2 {
+    max-width: 2000px;
+    box-sizing: border-box;
+  }
+
+  /* Extend main body content to grid column 9 */
+/* .page-columns .page-full > * {
+    grid-column: 3 / 11 !important;
+    padding-right: 1rem;
+    padding-left: inherit;
+  } */
