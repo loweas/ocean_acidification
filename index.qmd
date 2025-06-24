@@ -119,7 +119,7 @@ Our study addresses this gap through integrated modeling. We combine high-resolu
 
 ## Downscaled Projections and Novelty of OA in the MHI
 
-[![](https://img.shields.io/badge/Download-Slides-blue)](assets/slides/slides.pptx)
+[![](https://img.shields.io/badge/Download-Slides-blue)](assets/slides/osm_hosekova.pdf){target="_blank"}
 
 :::{.cr-section layout="sidebar-left"}
 
