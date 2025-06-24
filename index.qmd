@@ -4,7 +4,6 @@ author:
   - name: Lucia Hošeková
   - name: Lansing Perng
   - name: Ashley Lowe Mackenzie
-  - name: <i>Others...</i>
 language:
   en:
     title-block-author-single: "Author"
@@ -283,6 +282,16 @@ Vulnerability indices at the end-century reveal distinct community risk profiles
 :::
 
 ## The socioeconomic impact of climate change on coral reef in the MHI
+
+Projections of coral reef decline under climate change have major implications for the well-being of communities across the MHI, especially considering the central role reefs play in supporting coastal recreation, food security, and local economies. We developed a spatially explicit framework that links ecological projections from the Atlantis model with an economic valuation of changes in recreational reef use across the MHI to quantify these impacts.More actions
+
+Our approach integrates several data sources and methods. First, we paired site-specific projections of future coral cover with detailed information on coastal access sites, recreational amenities, and state level population forecasts under each climate scenario. We then estimated changes in the welfare value of recreation using a parameterized model derived from a travel cost study of Maui residents, accounting for site amenities, ecological conditions and resident income. This allowed us to estimate both annual and cumulative welfare losses for residents under the three climate scenarios.
+
+Our results show that climate-driven reef loss is projected to lead to substantial reductions in recreational value across the MHI. The greatest potential welfare loss scenarios are projected to occur under the lower climate emission scenarios due to larger increases in population under the corresponding scenarios, i.e. more individuals to experience the losses of coral cover. By the end of the century, cumulative welfare losses for residents are projected to be around $2.1 to $3.3 billion, with most impacts concentrated in the most populous islands. Spatial analysis reveals pronounced disparities: some communities face welfare losses more than five times greater per resident than others. Using the EPA's EJScreen, we further identified that many of the most affected locations are home to disadvantaged communities which face higher risk of environmental hazards.
+
+Important uncertainties and limitations exist in this analysis. The methodology focused primarily on residents and does not include tourism values, greatly underestimating the overall economic values associated with coral reef decline. Projections of coral cover and population change are subject to model assumptions and future policy decisions. Nevertheless, the framework allows for transparent mapping of vulnerabilities and identifies where the need for adaptation or compensation may be greatest.
+
+Our analysis reveals the economic stakes of climate-driven coral reef decline, the importance of spatial targeting in future management, and the need for policies that address both ecological resilience and social equity. Ongoing work should refine economic valuation, expand to other ecosystem services, and explore the benefits of different adaptation and restoration strategies for both people and reefs.
 
 ## Future directions for building resilience for Hawai'i's reefs and communities
 
