@@ -119,6 +119,8 @@ Our study addresses this gap through integrated modeling. We combine high-resolu
 
 ## Downscaled Projections and Novelty of OA in the MHI
 
+[![](https://img.shields.io/badge/Download-Slides-blue)](assets/slides/slides.pptx)
+
 :::{.cr-section layout="sidebar-left"}
 
 OA impacts in Hawai‘i are shaped by the islands’ unique physical and oceanographic context. The MHI are located within the North Pacific Subtropical Gyre, a major ocean current system that shapes local water temperature, chemistry, and other characteristics. [@cr-north-pacific-subtropical-gyre]
@@ -187,7 +189,26 @@ The spatial distribution of novelty was also analyzed, revealing that both the t
 
 By the end of the century, nearly all reef areas are projected to experience ocean conditions outside the range observed in recent history. The high-resolution, scenario-based projections from this analysis characterize the local chemical and physical environments that shape coral reef exposure, providing the environmental inputs necessary for evaluating ecosystem responses under changing conditions.
 
+### Explore the Paper & Code
+
+Hošeková, L., Friedrich, T., Powell, B. S., & Sabine, C. (2025). Patterns of ocean acidification emergence in the Hawaiian Islands using dynamically downscaled projections. Journal of Geophysical Research: Oceans, 130, e2024JC021903. https://doi.org/10.1029/2024JC021903
+
+```{=html}
+<div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; margin-top: 1rem;">
+  <div style="text-align: center; margin: 1rem;">
+    <img src="assets/images/lucia/hosekova_et_al_paper_qr_code.png" alt="QR code to paper" width="160">
+    <p><strong>Scientific Paper</strong><br><span style="font-size: 12.5pt;">Scan or <a href="https://doi.org/10.1029/2024JC021903" target="_blank">view online</a></span></p>
+  </div>
+  <div style="text-align: center; margin: 1rem;">
+    <img src="assets/images/lucia/hesokova_et_al_code_repo_qr_code.png" alt="QR code to code repository" width="160">
+    <p><strong>Code Repository</strong><br><span style="font-size: 12.5pt;">Scan or <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ZX13FN" target="_blank">view on Harvard Dataverse</a></span></p>
+  </div>
+</div>
+```
+
 ## Coral reef fishery outcomes in the MHI under climate change
+
+[![](https://img.shields.io/badge/Download-Slides-blue)](assets/slides/slides.pptx)
 
 :::{.cr-section layout="sidebar-right"}
 
@@ -283,6 +304,8 @@ Vulnerability indices at the end-century reveal distinct community risk profiles
 
 ## The socioeconomic impact of climate change on coral reef in the MHI
 
+[![](https://img.shields.io/badge/Download-Slides-blue)](assets/slides/slides.pptx)
+
 Projections of coral reef decline under climate change have major implications for the well-being of communities across the MHI, especially considering the central role reefs play in supporting coastal recreation, food security, and local economies. We developed a spatially explicit framework that links ecological projections from the Atlantis model with an economic valuation of changes in recreational reef use across the MHI to quantify these impacts.More actions
 
 Our approach integrates several data sources and methods. First, we paired site-specific projections of future coral cover with detailed information on coastal access sites, recreational amenities, and state level population forecasts under each climate scenario. We then estimated changes in the welfare value of recreation using a parameterized model derived from a travel cost study of Maui residents, accounting for site amenities, ecological conditions and resident income. This allowed us to estimate both annual and cumulative welfare losses for residents under the three climate scenarios.
@@ -298,11 +321,3 @@ Our analysis reveals the economic stakes of climate-driven coral reef decline, t
 Our research demonstrates that coral reefs in the MHI are projected to face unprecedented OA and warming, with far-reaching consequences for reef ecosystems, fisheries, and coastal communities. Across all modeled scenarios, significant declines in coral biomass are expected, accompanied by changes throughout the food web and negative effects on recreational and economic value. The magnitude and timing of these impacts depend on future emissions and will vary by location, with some areas and communities facing greater risks than others. While local management actions can provide some benefits, their effectiveness is limited as climate stress intensifies.
 
 Our work emphasizes the importance of reducing greenhouse gas emissions, strengthening local management where possible, and investing in ongoing monitoring to improve our understanding of OA and ecosystem change. Adaptation strategies that are tailored to the spatial variability of impacts and that address both ecological and social vulnerability will be key to building resilience for MHI reefs and the people who depend on them. Further research should continue to refine models, incorporate additional ecosystem services, and inform policies that support both conservation and community well-being.
-
-<!-- Text [cr-]
-:::{#cr-}
-![](/assets/images/)
-::: -->
-
-<!-- :::{.cr-section layout="sidebar-left"}
-::: -->
